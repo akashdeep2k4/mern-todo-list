@@ -10,6 +10,10 @@ app.use(express.json());
 
 mongoose.connect("mongodb+srv://akashdeep2k4:pidDS9hbbuI6VpBx@cluster2k4.usg3hlk.mongodb.net/mern-todo-list?retryWrites=true&w=majority&appName=Cluster2k4");
 
+app.get("/", (req, res) => {
+  res.send("Server is running!");
+});
+
 app.get("/get", (req, res) => {
   todoModel
     .find()
