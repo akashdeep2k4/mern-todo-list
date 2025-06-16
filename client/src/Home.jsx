@@ -10,14 +10,14 @@ export default function Home() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/get")
+      .get("https://mern-todo-list-mf4p.onrender.com/get")
       .then((result) => setTodos(result.data))
       .catch((error) => console.log(error));
   }, []);
 
   const handleEdit = (id) => {
     axios
-      .put("http://localhost:3000/update/" + id)
+      .put("https://mern-todo-list-mf4p.onrender.com/update/" + id)
       .then((result) => {
         location.reload();
       })
@@ -26,7 +26,7 @@ export default function Home() {
 
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:3000/delete/" + id)
+      .delete("https://mern-todo-list-mf4p.onrender.com/delete/" + id)
       .then((result) => {
         location.reload();
       })

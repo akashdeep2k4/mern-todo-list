@@ -6,7 +6,7 @@ export default function Create() {
 
   const handleAdd = () => {
     axios
-      .post("http://localhost:3000/add", { task: task })
+      .post("https://mern-todo-list-mf4p.onrender.com/add", { task: task })
       .then((result) => {
         location.reload();
       })
